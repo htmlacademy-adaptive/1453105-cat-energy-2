@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Дарья Петрова](https://up.htmlacademy.ru/adaptive-individual/2/user/1453105).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина](https://github.com/jumile).
 
 ---
 
