@@ -2,122 +2,135 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Котиковый проект</title>
+    <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header">
-      <nav class="navigation">
-        <a class="logo" href="index.html">
-          <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта">
-          <p class="logo__label">Cat Energy</p>
-        </a>
-        <ul class="navigation-list">
+      <a class="main-header__logo logo" href="index.html">
+        <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта изображение">
+        <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav__toggle">
+          <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
+        </div>
+        <ul class="main-nav__list navigation-list">
           <li class="navigation-list__item">
-            <a class="navigation-link navigation-link--active" href="index.html">Главная</a>
+            <a class="navigation-list__link navigation-list__link--active" href="index.html">Главная</a>
           </li>
           <li class="navigation-list__item">
-            <a class="navigation-link" href="catalog.html">Каталог продукции</a>
+            <a class="navigation-list__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="navigation-list__item">
-            <a class="navigation-link" href="#">Подбор программы</a>
+            <a class="navigation-list__link" href="#">Подбор программы</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <main class="main-index">
+  </header>
+    <main class="main">
       <section class="declaration">
-        <h1 class="visually-hidden">Сайт подбора питания для котов</h1>
-        <p class="declaration__title">Функциональное питание для котов</p>
+        <h1 class="declaration__title">Функциональное питание для котов</h1>
         <p class="declaration__subtitle">Занялся собой? Займись котом!</p>
         <a class="declaration__link" href="#">Подобрать программу</a>
         <img class="declaration__image" src="/" width="100" height="100" alt="Питание со вкусом курицы">
       </section>
-      <section class="types">
+      <section class="nutrition-type">
         <h2 class="visually-hidden">Программы питания</h2>
-        <ul class="type-list">
-          <li class="type-list__item type-slim">
-            <h3 class="type-title">Похудение</h3>
-            <p class="type-subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+        <ul class="nutrition-type__list">
+          <li class="nutrition-type__list-item nutrition-type__list-item--slim">
+            <h3 class="nutrition-type__list-title">Похудение</h3>
+            <p class="nutrition-type__list-subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
               поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="type-link" href="#">Каталог slim</a>
+            <a class="nutrition-type__list-link" href="#">Каталог slim</a>
           </li>
-          <li class="type-list__item type-pro">
-            <h3 class="type-title">Набор массы</h3>
-            <p class="type-subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет
+          <li class="nutrition-type__list-item nutrition-type__list-item--pro">
+            <h3 class="nutrition-type__list-title">Набор массы</h3>
+            <p class="nutrition-type__list-subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет
               вашему коту нарастить необходимые мышцы!</p>
-            <a class="type-link" href="#">Каталог slim</a>
+            <a class="nutrition-type__list-link" href="#">Каталог pro</a>
           </li>
         </ul>
       </section>
       <section class="process">
-        <h2 class="visually-hidden">Процесс питания</h2>
-        <ol class="process-list">
-          <li class="process-list__item healthy-process">
-            <p class="process__title">Функциональное питание содержит только полезные питательные вещества.</p>
+        <h2 class="process__title">Как это работает</h2>
+        <ol class="process__list">
+          <li class="process__list-item process__list-item--healthy">
+            <p class="process__list-title">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="process-list__item easy-process">
-            <p class="process__title">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          <li class="process__list-item process__list-item--easy">
+            <p class="process__list-title">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="process-list__item exchange-process">
-            <p class="process__title">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          <li class="process__list-item process__list-item--exchange">
+            <p class="process__list-title">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="process-list__item time-process">
-            <p class="process__title">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <li class="process__list-item process__list-item--time">
+            <p class="process__list-title">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ol>
       </section>
       <section class="example">
-        <h2 class="visually-hidden">Результаты питания</h2>
-        <p class="example__title">Живой пример</p>
+        <h2 class="example__title">Живой пример</h2>
         <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
           Отличный результат без изнуряющих тренировок!
           При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="example-list">
-          <li class="example-list__item example-weight">5 кг</li>
-          <li class="example-list__item example-duration">60 дней</li>
+        <ul class="example__list">
+          <li class="example__list-item example__list-item--weight">5 кг</li>
+          <li class="example__list-item example__list-item--duration">60 дней</li>
         </ul>
         <p class="example__sum">Затраты на питание:<span>15 000 руб.</span></p>
-        <div class="example__slider"></div>
+        <div class="example__slider slider">
+          <button class="slider__button" type="button" aria-label="Управление слайдером"></button>
+          <ul class="slider__list">
+            <li class="slider__list-item">
+              <img class="slider__list-image" src="/" width="100" height="100" alt="Котик до питания">
+            </li>
+            <li class="slider__list-item">
+              <img class="slider__list-image" src="/" width="100" height="100" alt="Котик после питания">
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
-    <footer class="footer main-footer">
+    <footer class="footer footer--main">
       <section class="map">
         <h2 class="visually-hidden">Адрес магазина</h2>
         <div class="map__address">
-          <p class="address-title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="address-wrapper">
-            <span class="address-element">ул. Большая Конюшенная, д. 19/8</span>
-            <span class="address-element">Санкт-Петербург</span>
+          <p class="map__address-title">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="address">
+            <span class="address__element">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="address__element">Санкт-Петербург</span>
           </address>
         </div>
-        <div class="map__wrapper"></div>
+        <div class="map__wrapper">
+          <img class="map__image" src="/" width="100" height="100" alt="Расположение магазина на карте">
+        </div>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="logo" href="index.html">
-          <p class="logo__label">Cat Energy</p>
+        <a class="contacts__logo logo" href="index.html">
+          <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
         </a>
-        <ul class="social-link-list">
-          <li class="social-link-list__item">
-            <a class="social-link social-link--vk" href="https://vk.com/htmlacademy">
+        <ul class="link-list">
+          <li class="link-list__item">
+            <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Vkontakte</span>
             </a>
           </li>
-          <li class="social-link-list__item">
-            <a class="social-link social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <li class="link-list__item">
+            <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Youtube</span>
             </a>
           </li>
-          <li class="social-link-list__item">
-            <a class="social-link social-link--telegram" href="https://t.me/htmlacademy">
+          <li class="link-list__item">
+            <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Telegram</span>
             </a>
           </li>
         </ul>
-        <a class="developer-link" aria-label="Ссылка на сайт разработчика" href="https://htmlacademy.ru/"></a>
+        <a class="developer-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </section>
     </footer>
   </body>

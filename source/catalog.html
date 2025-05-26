@@ -2,206 +2,238 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Котиковый проект</title>
+    <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header">
-      <nav class="navigation">
-        <a class="logo" href="index.html">
-          <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта">
-          <p class="logo__label">Cat Energy</p>
-        </a>
-        <ul class="navigation-list">
+      <a class="main-header__logo logo" href="index.html">
+        <img class="logo__image" src="/" width="100" height="100" alt="Логотип продукта изображение">
+        <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav__toggle">
+          <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
+        </div>
+        <ul class="main-nav__list navigation-list">
           <li class="navigation-list__item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-list__link" href="index.html">Главная</a>
           </li>
           <li class="navigation-list__item">
-            <a class="navigation-link navigation-link--active" href="#">Каталог продукции</a>
+            <a class="navigation-list__link navigation-list__link--active" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="navigation-list__item">
-            <a class="navigation-link" href="#">Подбор программы</a>
+            <a class="navigation-list__link" href="#">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="main-catalog">
-      <h1 class="visually-hidden">Каталог продукции</h1>
+    <main class="main main--catalog">
       <section class="catalog">
-        <h2 class="catalog__title">Товары в наличии</h2>
+        <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list">
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy PRO 500 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy pro 500 г курица">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy PRO 500 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">500 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Курица</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">700 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">500 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Курица</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">700 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy pro 1000 г курица">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">1000 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Курица</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">1000 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">1000 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Курица</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">1000 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy PRO 500 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy pro 500 г рыба">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy PRO 500 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">500 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Рыба</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">700 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">500 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Рыба</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">700 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy pro 1000 г рыба">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">1000 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Рыба</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">1000 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">1000 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Рыба</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">1000 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy SLIM 500 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy slim 500 г гречка">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy SLIM 500 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">500 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Гречка</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">400 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">500 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Гречка</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">400 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy SLIM 1000 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy slim 1000 г гречка">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy SLIM 1000 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">1000 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Гречка</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">700 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">1000 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Гречка</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">700 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
             </div>
           </li>
-          <li class="catalog__list-item">
+          <li class="catalog__item">
             <div class="product">
-              <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy">
-              <h3 class="product__title">Cat Energy SLIM 500 г</h3>
+              <a class="product__image-link" href="#">
+                <img class="product__image" src="/" width="100" height="100" alt="Продукт cat energy slim 500 г рис">
+              </a>
+              <a class="product__title-link" href="#">
+                <h3 class="product__title">Cat Energy SLIM 500 г</h3>
+              </a>
               <dl class="product__definition">
-                <dt class="definition-name">Масса</dt><dd class="definition-value">500 г</dd>
-                <dt class="definition-name">Вкус</dt><dd class="definition-value">Рис</dd>
-                <dt class="definition-name">Цена</dt><dd class="definition-value">500 ₽</dd>
+                <dt class="product__definition-name">Масса</dt><dd class="product__definition-value">500 г</dd>
+                <dt class="product__definition-name">Вкус</dt><dd class="product__definition-value">Рис</dd>
+                <dt class="product__definition-name">Цена</dt><dd class="product__definition-value">500 ₽</dd>
               </dl>
-              <button class="product__button button" type="button">Заказать</button>
+              <a class="product__link button" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="catalog__item show-product">
+            <div class="show-product__block">
+              <p class="show-product__title">Показать еще 100500 товаров</p>
+              <p class="show-product__subtitle">На самом деле вкусов гораздо больше!</p>
+              <a class="show-product__link button" href="#">Показать всё</a>
             </div>
           </li>
         </ul>
-        <div class="catalog__show-more">
-          <div class="show-more-block">
-            <p class="show-more-title">Показать еще 100500 товаров</p>
-            <p class="show-more-subtitle">На самом деле вкусов гораздо больше!</p>
-            <button class="show-more-button button" type="button">Показать всё</button>
-          </div>
-        </div>
       </section>
-      <section class="extra-products">
-        <h2 class="extra-products__title">Дополнительные товары</h2>
-        <ul class="extra-products__list">
-          <li class="extra-product">
-            <h4 class="extra-product__title">Сахарозаменитель</h4>
-            <p class="extra-product__subtitle">1 упаковка (100 г)</p>
-            <p class="extra-product__price">200 ₽</p>
-            <button class="extra-product__button" type="button">Заказать</button>
+      <section class="extra-product">
+        <h2 class="extra-product__title">Дополнительные товары</h2>
+        <ul class="extra-product__list">
+          <li class="extra-product__item">
+            <h4 class="extra-product__item-title">Сахарозаменитель</h4>
+            <p class="extra-product__item-subtitle">1 упаковка (100 г)</p>
+            <p class="extra-product__item-price">200 ₽</p>
+            <a class="extra-product__item-link" href="#">Заказать</a>
           </li>
-          <li class="extra-product">
-            <h4 class="extra-product__title">Питьевая вода</h4>
+          <li class="extra-product__item">
+            <h4 class="extra-product__item-title">Питьевая вода</h4>
             <p class="extra-product__subtitle">5 литров</p>
-            <p class="extra-product__price">50 ₽</p>
-            <button class="extra-product__button" type="button">Заказать</button>
+            <p class="extra-product__item-price">50 ₽</p>
+            <a class="extra-product__item-link" href="#">Заказать</a>
           </li>
-          <li class="extra-product">
-            <h4 class="extra-product__title">Молоко</h4>
+          <li class="extra-product__item">
+            <h4 class="extra-product__item-title">Молоко</h4>
             <p class="extra-product__subtitle">1 литр</p>
-            <p class="extra-product__price">100 ₽</p>
-            <button class="extra-product__button" type="button">Заказать</button>
+            <p class="extra-product__item-price">100 ₽</p>
+            <a class="extra-product__item-link" href="#">Заказать</a>
           </li>
-          <li class="extra-product">
-            <h4 class="extra-product__title">витамины</h4>
+          <li class="extra-product__item">
+            <h4 class="extra-product__item-title">Витамины</h4>
             <p class="extra-product__subtitle">1 упаковка (30 г)</p>
-            <p class="extra-product__price">300 ₽</p>
-            <button class="extra-product__button" type="button">Заказать</button>
+            <p class="extra-product__item-price">300 ₽</p>
+            <a class="extra-product__item-link" href="#">Заказать</a>
           </li>
         </ul>
-        <div class="extra-products__present">
-          <p class="present-title">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="extra-product__present">
+          <p class="extra-product__present-title">Закажите все и получите чехол для кота в подарок!</p>
         </div>
       </section>
       <section class="subscription">
         <h2 class="subscription__title">Акции и новинки</h2>
         <p class="subscription__subtitle">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-        <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscription-form-id">Введите адрес почты</label>
-          <input class="subscription-input" type="email" id="subscription-form-id" name="email" placeholder="кuklachev@gmail.com">
-          <button class="subscription-button button" type="submit">Подписаться</button>
+        <form class="subscription__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="form-email">Введите адрес почты</label>
+          <input class="form__input" type="email" id="form-email" name="email" placeholder="kuklachev@gmail.com">
+          <button class="form__button button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="footer catalog-footer">
+    <footer class="footer footer--catalog">
       <section class="map">
         <h2 class="visually-hidden">Адрес магазина</h2>
         <div class="map__address">
-          <p class="address-title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="address-wrapper">
-            <span class="address-element">ул. Большая Конюшенная, д. 19/8</span>
-            <span class="address-element">Санкт-Петербург</span>
+          <p class="map__address-title">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="address">
+            <span class="address__element">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="address__element">Санкт-Петербург</span>
           </address>
         </div>
-        <div class="map__wrapper"></div>
+        <div class="map__wrapper">
+          <img class="map__image" src="/" width="100" height="100" alt="Расположение магазина на карте">
+        </div>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <a class="logo" href="index.html">
-          <p class="logo__label">Cat Energy</p>
+        <a class="contacts__logo logo" href="index.html">
+          <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
         </a>
-        <ul class="social-link-list">
-          <li class="social-link-list__item">
-            <a class="social-link social-link--vk" href="https://vk.com/htmlacademy">
+        <ul class="link-list">
+          <li class="link-list__item">
+            <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Vkontakte</span>
             </a>
           </li>
-          <li class="social-link-list__item">
-            <a class="social-link social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <li class="link-list__item">
+            <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Youtube</span>
             </a>
           </li>
-          <li class="social-link-list__item">
-            <a class="social-link social-link--telegram" href="https://t.me/htmlacademy">
+          <li class="link-list__item">
+            <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Telegram</span>
             </a>
           </li>
         </ul>
-        <a class="developer-link" aria-label="Ссылка на сайт разработчика" href="https://htmlacademy.ru/"></a>
+        <a class="developer-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </section>
     </footer>
   </body>
