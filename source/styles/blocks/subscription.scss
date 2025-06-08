@@ -1,0 +1,8 @@
+.subscription__title {
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+  text-transform: uppercase;
+}
+
+.subscription__subtitle {
+  @include font-decore($main-font, 16px, 1.5, 400, $based-color);
+}

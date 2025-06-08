@@ -1,0 +1,4 @@
+.developer-link {
+  @include font-decore($second-font, 16px, 1.25, 400, $basic-text-color);
+  text-decoration: none;
+}

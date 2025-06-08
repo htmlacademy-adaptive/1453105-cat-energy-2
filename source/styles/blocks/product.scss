@@ -1,0 +1,20 @@
+.product__title {
+  @include font-decore($main-font, 16px, 1.25, 400, $second-text-color);
+  text-transform: uppercase;
+}
+
+.product__title-link {
+  text-decoration: none;
+}
+
+.product__definition-name {
+  @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+}
+
+.product__definition-value {
+  @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+}
+
+.product__link {
+  text-decoration: none;
+}

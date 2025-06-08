@@ -1,0 +1,27 @@
+.declaration {
+  background-image:
+    linear-gradient(to bottom, rgba(105, 184, 57, 0.85) 63%, $secondary-color 37%),
+    url("../../images/decorate/backgrounds/bg-main-page-mobile@1x.png"),
+    linear-gradient(to right, #504f54, #434247);
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image:
+      linear-gradient(to bottom, rgba(105, 184, 57, 0.85) 63%, $secondary-color 37%),
+      url("../../images/decorate/backgrounds/bg-main-page-mobile@2x.png"),
+      linear-gradient(to right, #504f54, #434247);
+    background-size: auto, auto 320px, auto;
+  }
+}
+
+.declaration__title {
+  @include font-decore($main-font, 36px, 1, 400, $secondary-color);
+  text-align: center;
+}
+
+.declaration__subtitle {
+  @include font-decore($main-font, 14px, 1, 400, $secondary-color);
+  text-transform: uppercase;
+  text-align: center;
+}

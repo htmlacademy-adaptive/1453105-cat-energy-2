@@ -1,0 +1,17 @@
+.map {
+  background-color: $secondary-color;
+
+  &--catalog {
+    background-color: $basic-bg-color;
+  }
+}
+
+.map__address-title {
+  @include font-decore($main-font, 16px, 1.25, 400, $based-color);
+  text-transform: uppercase;
+}
+
+.address__element {
+  @include font-decore($second-font, 14px, 1.43, 400, $basic-text-color);
+  font-style: normal;
+}

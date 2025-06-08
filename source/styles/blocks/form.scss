@@ -1,0 +1,8 @@
+.form__input {
+  @include font-decore($main-font, 20px, 1, 400, $basic-text-color);
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: $basic-text-color;
+  }
+}

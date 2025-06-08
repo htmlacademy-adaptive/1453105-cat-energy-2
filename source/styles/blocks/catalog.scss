@@ -1,0 +1,7 @@
+.catalog__title {
+  @include font-decore($main-font, 36px, 1, 400, $based-color);
+}
+
+.catalog__list {
+  @include reset-list;
+}

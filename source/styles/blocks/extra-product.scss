@@ -1,0 +1,51 @@
+.extra-product__title {
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+}
+
+.extra-product__list {
+  @include reset-list;
+}
+
+.extra-product__item-title {
+  @include font-decore($main-font, 16px, 1, 400, $second-text-color);
+  text-transform: uppercase;
+}
+
+.extra-product__item-subtitle {
+  @include font-decore($second-font, 14px, 1, 400, $second-text-color);
+}
+
+.extra-product__item-price {
+  @include font-decore($second-font, 14px, 1, 400, $second-text-color);
+  text-transform: uppercase;
+}
+
+.extra-product__item-link {
+  text-decoration: none;
+}
+
+.extra-product__present {
+  background-image:
+    linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
+    url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto, auto;
+
+  @include retina {
+    background-image:
+      linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
+      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@2x.png");
+    background-size: auto, auto 290px;
+  }
+
+  @include tablet-size {
+    background-position: center center;
+    background-size: auto, cover;
+  }
+}
+
+.extra-product__present-title {
+  @include font-decore($second-font, 16px, 1.25, 400, $secondary-color);
+  padding: 48px 60px 45px;
+}

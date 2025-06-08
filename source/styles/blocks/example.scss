@@ -1,0 +1,25 @@
+.example {
+  background-color: #eaeaea;
+}
+
+.example__title {
+  @include font-decore($main-font, 36px, 1.4, 400, $based-color);
+}
+
+.example__subtitle {
+  @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
+}
+
+.example__list {
+  @include reset-list;
+}
+
+.example__list-item {
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+  text-transform: uppercase;
+}
+
+.example__sum {
+  @include font-decore($main-font, 14px, 1.4, 400, $based-color);
+  text-transform: uppercase;
+}

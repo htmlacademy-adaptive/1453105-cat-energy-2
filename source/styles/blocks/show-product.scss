@@ -1,0 +1,17 @@
+.show-product__title {
+  @include font-decore($main-font, 16px, 1.25, 400, #111111);
+  text-transform: uppercase;
+}
+
+.show-product__subtitle {
+  @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+}
+
+.show-product__link {
+  text-decoration: none;
+
+  &.button {
+    background-color: $basic-bg-color;
+    color: $basic-text-color;
+  }
+}

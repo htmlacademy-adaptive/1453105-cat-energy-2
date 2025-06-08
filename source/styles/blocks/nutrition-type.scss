@@ -1,0 +1,22 @@
+.nutrition-type__list {
+  @include reset-list;
+}
+
+.nutrition-type__list-item {
+  background-color: $basic-bg-color;
+}
+
+.nutrition-type__list-title {
+  @include font-decore($main-font, 24px, 1.37, 400, $based-color);
+  text-transform: uppercase;
+}
+
+.nutrition-type__list-subtitle {
+  @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+}
+
+.nutrition-type__list-link {
+  @include font-decore($main-font, 16px, 1, 400, $based-color);
+  text-transform: uppercase;
+  text-decoration: none;
+}

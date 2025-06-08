@@ -1,0 +1,5 @@
+.button {
+  @include font-decore($main-font, 16px, 1.25, 400, $secondary-color);
+  text-transform: uppercase;
+  background-color: $accent-color;
+}

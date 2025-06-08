@@ -1,0 +1,11 @@
+.process__title {
+  @include font-decore($main-font, 36px, 1.4, 400, $based-color);
+}
+
+.process__list {
+  @include reset-list;
+}
+
+.process__list-title {
+  @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+}
