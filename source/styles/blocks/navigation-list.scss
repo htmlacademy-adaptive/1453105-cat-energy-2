@@ -1,11 +1,77 @@
 .navigation-list {
   background-color: inherit;
+  text-align: center;
+  width: 100%;
+  color: inherit;
+
 
   @include reset-list;
+
+  &--closed {
+    display: none;
+
+    @include tablet-size {
+      display: flex;
+    }
+  }
+
+  @include tablet-size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 33px;
+    place-content: center end;
+  }
+
+  @include desktop-size {
+    border-color: inherit;
+    background-color: transparent;
+  }
+}
+
+
+.navigation-list__item {
+  padding: 22px 20px 24px;
+  border-bottom: 1px solid #d9d9d9;
+  color: inherit;
+
+  @include tablet-size {
+    border-bottom: none;
+    padding: 0;
+    align-content: center;
+  }
 }
 
 .navigation-list__link {
   @include font-decore($main-font, 20px, 1, 400, $based-color);
   text-transform: uppercase;
   text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  color: inherit;
+  border-color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+
+  &--active {
+    color: $accent-color;
+
+    @include tablet-size {
+      color: $based-color;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $accent-color;
+    }
+
+    @include desktop-size {
+      color: inherit;
+      border-bottom: 2px solid inherit;
+    }
+  }
 }

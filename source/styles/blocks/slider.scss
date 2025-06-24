@@ -1,3 +1,102 @@
 .slider__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__list-item {
+  &--after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__list-image {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  border-radius: 2px;
+  border: none;
+  background-color: $third-text-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s, background-color 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    transition: opacity 0.3s, background-color 0.3s;
+  }
+
+  &::before {
+    width: 40px;
+    height: 40px;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    border: 2px solid $third-text-color;
+  }
+
+  &::after {
+    width: 24px;
+    height: 18px;
+    mask: url("../../icons/icon-slider-arrows.svg") no-repeat center;
+    background-color: $third-text-color;
+  }
+
+  &:hover {
+    background-color: $accent-color;
+    transition: opacity 0.3s, background-color 0.3s, border-color 0.3s;
+
+    &::before {
+      border-color: rgba(105, 184, 57, 0.6);
+    }
+
+    &::after {
+      background-color: rgba(105, 184, 57, 0.6);
+    }
+  }
+
+  &:active {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    opacity: 0.6;
+    transition: opacity 0.3s, background-color 0.3s, border-color 0.3s;
+
+    &::before {
+      border-color: rgba(105, 184, 57, 0.6);
+    }
+
+    &::after {
+      background-color: rgba(105, 184, 57, 0.6);
+    }
+  }
 }

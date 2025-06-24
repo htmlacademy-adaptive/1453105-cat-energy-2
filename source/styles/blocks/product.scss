@@ -1,3 +1,33 @@
+.product {
+  display: grid;
+  grid-template: repeat(3, auto) /  repeat(2, 1fr);
+  grid-template-areas:
+    "image title"
+    "image definition"
+    "link  link";
+
+  @include tablet-size {
+    grid-template: repeat(5, auto) / auto;
+    grid-template-areas:
+      "image"
+      "title"
+      "definition"
+      "link";
+    background-image: linear-gradient(to bottom, $secondary-color 81px, $basic-bg-color 81px);
+    max-width: 324px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include desktop-size {
+    max-width: 245px;
+  }
+}
+
+.product__image-link {
+  grid-area: image;
+}
+
 .product__title {
   @include font-decore($main-font, 16px, 1.25, 400, $second-text-color);
   text-transform: uppercase;
@@ -5,6 +35,11 @@
 
 .product__title-link {
   text-decoration: none;
+  grid-area: title;
+}
+
+.product__definition {
+  grid-area: definition;
 }
 
 .product__definition-name {
@@ -17,4 +52,5 @@
 
 .product__link {
   text-decoration: none;
+  grid-area: link;
 }

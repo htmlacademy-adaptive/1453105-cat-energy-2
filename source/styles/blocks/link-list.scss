@@ -1,3 +1,57 @@
 .link-list {
   @include reset-list;
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 20px;
+  align-self: center;
+
+  @include tablet-size {
+    max-width: 350px;
+  }
+}
+
+.link-list__link {
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $third-text-color;
+    transition: background-color 0.3s;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background-color: $accent-color;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba(105, 184, 57, 0.6);
+      transition: background-color 0.3s;
+    }
+  }
+
+  &--vk {
+    &::before {
+      mask: url("../../icons/icon-vk.svg");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      mask: url("../../icons/icon-youtube.svg");
+    }
+  }
+
+  &--telegram {
+    &::before {
+      mask: url("../../icons/icon-tg.svg");
+    }
+  }
 }

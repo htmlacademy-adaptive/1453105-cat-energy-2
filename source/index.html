@@ -12,20 +12,23 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo logo" href="index.html">
-        <picture>
-          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-image-desktop.svg">
-          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-image-tablet.svg">
-          <img class="logo__image" src="images/logo/logo-image-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
-        </picture>
-        <img class="logo__text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="Логотип Cat Energy текстовый">
-      </a>
-      <nav class="main-nav">
-        <div class="main-nav__toggle">
-          <button class="main-nav__toggle-button" type="button"><span class="visually-hidden">Показать меню</span></button>
+    <header class="header header--main">
+      <nav class="header__navigation header__navigation--js header__navigation--main">
+        <a class="header__logo logo" href="index.html">
+          <picture class="logo__image-wrapper">
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-image-desktop.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-image-tablet.svg">
+            <img class="logo__image" src="images/logo/logo-image-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          </picture>
+          <img class="logo__text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="Логотип Cat Energy текстовый">
+        </a>
+        <div class="header__toggle toggle">
+          <button class="toggle__button" type="button" id="toggle-button">
+            <span class="toggle__line"></span>
+            <span class="visually-hidden">Показать меню</span>
+          </button>
         </div>
-        <ul class="main-nav__list navigation-list">
+        <ul class="header__navigation-list navigation-list navigation-list--closed" id="toggle-menu">
           <li class="navigation-list__item">
             <a class="navigation-list__link navigation-list__link--active" href="index.html">Главная</a>
           </li>
@@ -42,14 +45,14 @@
       <section class="declaration">
         <h1 class="declaration__title">Функциональное питание для котов</h1>
         <p class="declaration__subtitle">Занялся собой? Займись котом!</p>
-        <a class="declaration__link button" href="#">Подобрать программу</a>
-        <picture>
+        <picture class="declaration__image-fake">
           <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/decorate/promo/hero-desktop@1x.png 1x, images/decorate/promo/hero-desktop@2x.png 2x">
           <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/decorate/promo/hero-tablet@1x.png 1x, images/decorate/promo/hero-tablet@2x.png 2x">
           <img class="declaration__image" src="images/decorate/promo/hero-mobile@1x.png" srcset="images/decorate/promo/hero-mobile@2x.png 2x" width="280" height="270" alt="Питание со вкусом курицы">
         </picture>
+        <a class="declaration__link button" href="#">Подобрать программу</a>
       </section>
-      <section class="nutrition-type">
+      <section class="nutrition-type container">
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="nutrition-type__list">
           <li class="nutrition-type__list-item nutrition-type__list-item--slim">
@@ -66,7 +69,7 @@
           </li>
         </ul>
       </section>
-      <section class="process">
+      <section class="process container">
         <h2 class="process__title">Как это работает</h2>
         <ol class="process__list">
           <li class="process__list-item process__list-item--healthy">
@@ -96,13 +99,13 @@
         <div class="example__slider slider">
           <button class="slider__button" type="button" aria-label="Управление слайдером"></button>
           <ul class="slider__list">
-            <li class="slider__list-item">
+            <li class="slider__list-item slider__list-item--before">
               <picture>
                 <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/decorate/slider/cat-before-tablet@1x.png 1x, images/decorate/slider/cat-before-tablet@2x.png 2x">
                 <img class="slider__list-image" src="images/decorate/slider/cat-before-mobile@1x.png" srcset="images/decorate/slider/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Котик до питания">
               </picture>
             </li>
-            <li class="slider__list-item">
+            <li class="slider__list-item slider__list-item--after">
               <picture>
                 <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/decorate/slider/cat-after-tablet@1x.png 1x, images/decorate/slider/cat-after-tablet@2x.png 2x">
                 <img class="slider__list-image" src="images/decorate/slider/cat-after-mobile@1x.png" srcset="images/decorate/slider/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Котик после питания">
@@ -115,7 +118,7 @@
     <footer class="footer footer--main">
       <section class="map">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <div class="map__address">
+        <div class="map__address container">
           <p class="map__address-title">Приглашаем к сотрудничеству дилеров!</p>
           <address class="address">
             <span class="address__element">ул. Большая Конюшенная, д. 19/8</span>
@@ -123,35 +126,37 @@
           </address>
         </div>
         <div class="map__wrapper">
-          <picture>
+          <picture class="map__wrapper-fake">
             <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/decorate/map/map-desktop@1x.png 1x, images/decorate/map/map-desktop@2x.png 2x">
             <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/decorate/map/map-tablet@1x.png 1x, images/decorate/map/map-tablet@2x.png 2x">
             <img class="map__image" src="images/decorate/map/map-mobile@1x.png" srcset="images/decorate/map/map-mobile@2x.png 2x" width="320" height="362" alt="Расположение магазина на карте">
           </picture>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts container">
         <h2 class="visually-hidden">Контакты</h2>
         <a class="contacts__logo logo" href="index.html">
-          <img class="logo__text" src="/" width="100" height="100" alt="Логотип продукта текстовый">
+          <img class="logo__text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="Логотип Cat Energy текстовый">
         </a>
-        <ul class="link-list">
-          <li class="link-list__item">
-            <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Vkontakte</span>
-            </a>
-          </li>
-          <li class="link-list__item">
-            <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в Youtube</span>
-            </a>
-          </li>
-          <li class="link-list__item">
-            <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Telegram</span>
-            </a>
-          </li>
-        </ul>
+        <div class="contacts__links">
+          <ul class="link-list">
+            <li class="link-list__item">
+              <a class="link-list__link link-list__link--vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Vkontakte</span>
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a class="link-list__link link-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы в Youtube</span>
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a class="link-list__link link-list__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Telegram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
         <a class="developer-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </section>
     </footer>

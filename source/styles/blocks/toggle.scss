@@ -1,0 +1,57 @@
+.toggle {
+  &--open {
+    .toggle__line {
+      background-color: transparent;
+      transition: background-color 0.2s;
+    }
+
+    .toggle__line::before {
+      transform: rotate(45deg) translate(-1px, 0);
+      transition: transform 0.3s;
+    }
+
+    .toggle__line::after {
+      transform: rotate(-45deg) translate(2px, -2px);
+      transition: transform 0.3s;
+    }
+  }
+}
+
+.toggle__button {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.toggle__line {
+  height: 0;
+  width: 24px;
+  padding: 1px 0;
+  background-color: $based-color;
+  display: block;
+  transition: background-color 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 24px;
+    height: 0;
+    padding: 1px 0;
+    background-color: $based-color;
+    display: block;
+    transform: rotate(0) translate(0, 0);
+    transition: transform 0.3s;
+  }
+
+  &::before {
+    transform: translateY(-10px);
+  }
+
+  &::after {
+    transform: translateY(6px);
+  }
+}

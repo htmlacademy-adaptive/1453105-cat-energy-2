@@ -1,22 +1,167 @@
 .nutrition-type__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include desktop-size {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
 }
 
 .nutrition-type__list-item {
   background-color: $basic-bg-color;
+  padding: 21px 20px 18px;
+  display: grid;
+  grid-template: auto 1fr auto/ auto 1fr;
+  gap: 15px 11px;
+  grid-template-areas:
+    "icon     title"
+    "subtitle subtitle"
+    "link     link";
+
+  @include tablet-size {
+    grid-template: repeat(3, auto) / 340px 1fr;
+    padding: 77px 30px 57px 53px;
+    gap: 0 20px;
+    grid-template-areas:
+      "title    icon"
+      "subtitle icon"
+      "link     icon";
+
+    &::before {
+      display: flex;
+      place-self: center;
+      width: 268px;
+      height: 211px;
+      margin: 0;
+    }
+  }
+
+  @include desktop-size {
+    grid-template: auto 1fr auto/ auto 1fr;
+    gap: 15px 11px;
+    grid-template-areas:
+      "icon     title"
+      "subtitle subtitle"
+      "link     link";
+  }
+}
+
+.nutrition-type__list-item--pro {
+  &::before {
+    content: "";
+    background: url("../../icons/icon-cat-walk.svg");
+    display: block;
+    grid-area: icon;
+    width: 67px;
+    height: 50px;
+    margin-left: -7px;
+  }
+
+  @include tablet-size {
+    &::before {
+      width: 268px;
+      height: 200px;
+    }
+  }
+
+  @include desktop-size {
+    &::before {
+      width: 134px;
+      height: 100px;
+    }
+  }
+}
+
+.nutrition-type__list-item--slim {
+  &::before {
+    content: "";
+    background: url("../../icons/icon-cat-sit.svg");
+    display: block;
+    grid-area: icon;
+    width: 50px;
+    height: 53px;
+    margin-right: 9px;
+  }
+
+  @include tablet-size {
+    &::before {
+      width: 200px;
+      height: 211px;
+    }
+  }
+
+  @include desktop-size {
+    &::before {
+      width: 100px;
+      height: 106px;
+    }
+  }
 }
 
 .nutrition-type__list-title {
   @include font-decore($main-font, 24px, 1.37, 400, $based-color);
   text-transform: uppercase;
+  grid-area: title;
+  margin: 0;
+  align-content: center;
+
+  @include tablet-size {
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 
 .nutrition-type__list-subtitle {
   @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+  grid-area: subtitle;
+  margin: 0;
+  padding: 7px 0 5px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @include tablet-size {
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 24px 0 48px;
+  }
 }
 
 .nutrition-type__list-link {
-  @include font-decore($main-font, 16px, 1, 400, $based-color);
+  @include font-decore($main-font, 16px, normal, 400, $based-color);
   text-transform: uppercase;
   text-decoration: none;
+  grid-area: link;
+  display: grid;
+  grid-template-columns: auto minmax(40px, 1fr);
+  align-items: center;
+  gap: 15px;
+  max-width: 50%;
+
+  &::after {
+    content: "";
+    background: url("../../icons/icon-arrow.svg") no-repeat right;
+    width: 24px;
+    height: 10px;
+    transition: width 0.3s;
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+      height: 9px;
+      transition: width 0.3s;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @include tablet-size {
+    font-size: 20px;
+  }
 }

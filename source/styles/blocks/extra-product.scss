@@ -1,51 +1,126 @@
+.extra-product {
+  @include desktop-size {
+    display: grid;
+    grid-template: auto 1fr / 1fr 245px;
+    gap: 0 80px;
+    grid-template-areas:
+      "title title"
+      "list  image";
+  }
+}
+
 .extra-product__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
+
+  @include desktop-size {
+    grid-area: title;
+  }
 }
 
 .extra-product__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include desktop-size {
+    grid-area: list;
+    gap: 0;
+    border-top: 1px solid #d9d9d9;
+  }
+}
+
+.extra-product__item {
+  display: grid;
+  gap: 15px 0;
+  grid-template: repeat(3, auto) /  repeat(2, 1fr);
+  grid-template-areas:
+    "title    title"
+    "subtitle price"
+    "link     link";
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @include desktop-size {
+    grid-template: auto / repeat(3, 1fr) 245px;
+    gap: 40px;
+    grid-template-areas: "title subtitle price link";
+    padding: 17px 0;
+    align-items: center;
+  }
 }
 
 .extra-product__item-title {
   @include font-decore($main-font, 16px, 1, 400, $second-text-color);
   text-transform: uppercase;
+  margin: 0;
+  grid-area: title;
 }
 
 .extra-product__item-subtitle {
   @include font-decore($second-font, 14px, 1, 400, $second-text-color);
+  margin: 0;
+  grid-area: subtitle;
 }
 
 .extra-product__item-price {
   @include font-decore($second-font, 14px, 1, 400, $second-text-color);
   text-transform: uppercase;
+  margin: 0;
+  grid-area: price;
+  justify-self: right;
 }
 
 .extra-product__item-link {
   text-decoration: none;
+  display: block;
+  grid-area: link;
+
+  @include desktop-size {
+    padding: 7px 0;
+  }
 }
 
 .extra-product__present {
+  margin: 35px 0 40px;
   background-image:
     linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
     url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: auto, auto;
+  background-size: auto, cover;
 
   @include retina {
     background-image:
       linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
       url("../../images/decorate/backgrounds/bg-catalog-page-mobile@2x.png");
-    background-size: auto, auto 290px;
+    background-size: auto, cover;
   }
 
   @include tablet-size {
     background-position: center center;
     background-size: auto, cover;
+    margin-bottom: 0;
+  }
+
+  @include desktop-size {
+    grid-area: image;
+    margin: 0;
   }
 }
 
 .extra-product__present-title {
   @include font-decore($second-font, 16px, 1.25, 400, $secondary-color);
-  padding: 48px 60px 45px;
+  padding: 60px 60px 40px;
+  margin: 0;
+  text-align: center;
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    display: block;
+    background-image: url("../../icons/icon-gift.svg");
+    margin: 0 auto 40px;
+  }
 }

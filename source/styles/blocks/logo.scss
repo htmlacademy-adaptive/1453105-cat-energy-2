@@ -1,3 +1,29 @@
 .logo {
-  // empty style
+  display: grid;
+  grid-template-columns: auto 1fr;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  @include tablet-size {
+    gap: 13px;
+  }
+}
+
+.logo__text {
+  place-self: center;
+
+  @include tablet-size {
+    justify-self: start;
+  }
 }
