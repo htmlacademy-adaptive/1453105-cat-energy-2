@@ -15,12 +15,14 @@
   }
 
   @include desktop-size {
-    grid-template: repeat(4, auto) / 1fr 610px 610px 1fr;
+    grid-template: 1fr auto  auto auto / 1fr 610px 610px 1fr;
     grid-template-areas:
       ". title    slider ."
       ". subtitle slider ."
       ". list     slider ."
       ". sum      slider .";
+    padding-bottom: 75px;
+    background: linear-gradient(to top, $basic-bg-color 462px, $secondary-color 463px);
   }
 }
 
@@ -40,6 +42,7 @@
     max-width: 1220px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 0 20px;
   }
 }
 
@@ -52,57 +55,86 @@
     grid-area: subtitle;
     font-size: 16px;
     line-height: 1.5;
-    padding-bottom: 55px;
+    padding: 0 30px 55px;
+  }
+
+  @include desktop-size {
+    padding: 0 178px 69px 0;
   }
 }
 
 .example__list {
   @include reset-list;
   margin: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: 1fr/ repeat(2, 1fr);
+  gap: 10px 32px;
+  align-items: normal;
 
   @include tablet-size {
     grid-area: list;
     margin: 0 0 0 30px;
+    gap: 0;
   }
 
   @include desktop-size {
     justify-content: left;
+    margin: 0;
+    max-width: 366px;
   }
 }
 
 .example__list-item {
-  @include font-decore($main-font, 24px, 1, 400, $based-color);
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ff0000;
-  align-items: center;
-  padding: 10px;
+  max-width: 124px;
+  display: grid;
+  grid-template: 2fr 1fr / 1fr;
+  background-color: inherit;
 
-
-  &::after {
-    @include font-decore($second-font, 12px, 1, 400, $basic-text-color);
-    text-transform: lowercase;
-  }
-
-  &--weight {
-    &::after {
-      content: "Снижение веса";
-    }
-  }
-
-  &--duration {
-    &::after {
-      content: "Затрачено времени";
-    }
-  }
 
   @include tablet-size {
     font-size: 30px;
     line-height: 1.2;
+    max-width: 162px;
+  }
+}
+
+.example__list-item-title {
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+  margin: 0;
+  text-transform: uppercase;
+  padding: 14px 14px 8px;
+  text-align: center;
+  align-content: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  @include tablet-size {
+    font-size: 30px;
+    line-height: 1.23;
+    padding: 15px;
+  }
+}
+
+.example__list-item-subtitle {
+  @include font-decore($second-font, 12px, 1, 400, $based-color);
+  margin: -5px 22px 0;
+  text-transform: lowercase;
+  text-align: center;
+  align-content: start;
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  background-color: #eaeaea;
+
+  @include tablet-size {
+    background-color: $secondary-color;
+    font-size: 14px;
+    margin: -7px 15px 0;
+  }
+
+  @include desktop-size {
+    background-color: $basic-bg-color;
   }
 }
 
@@ -117,6 +149,26 @@
     font-size: 20px;
     line-height: 1;
     margin: 0 30px 0 0;
+    justify-items: right;
+    padding-top: 11px;
+  }
+
+  @include desktop-size {
+    display: flex;
+    align-items: end;
+    padding: 0;
+    margin: 15px 0 0;
+  }
+}
+
+.example__sum-item {
+  @include tablet-size {
+    display: block;
+    padding-top: 9px;
+  }
+
+  @include desktop-size {
+    padding: 0;
   }
 }
 
@@ -130,5 +182,6 @@
 
   @include desktop-size {
     margin: 0;
+    padding-bottom: 10px;
   }
 }

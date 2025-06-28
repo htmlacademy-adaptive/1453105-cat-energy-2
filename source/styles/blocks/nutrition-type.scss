@@ -1,19 +1,22 @@
 .nutrition-type__list {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: repeat(2, 1fr)/ 1fr;
   gap: 20px;
 
+  @include tablet-size {
+    gap: 30px;
+  }
+
   @include desktop-size {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
+    grid-template: 1fr/ repeat(2, 1fr);
+    gap: 50px 80px;
   }
 }
 
 .nutrition-type__list-item {
   background-color: $basic-bg-color;
-  padding: 21px 20px 18px;
+  padding: 21px 20px 20px;
   display: grid;
   grid-template: auto 1fr auto/ auto 1fr;
   gap: 15px 11px;
@@ -42,11 +45,12 @@
 
   @include desktop-size {
     grid-template: auto 1fr auto/ auto 1fr;
-    gap: 15px 11px;
+    gap: 23px 47px;
     grid-template-areas:
       "icon     title"
       "subtitle subtitle"
       "link     link";
+    padding: 41px 60px 55px 52px;
   }
 }
 
@@ -116,10 +120,10 @@
 }
 
 .nutrition-type__list-subtitle {
-  @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+  @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
   grid-area: subtitle;
   margin: 0;
-  padding: 7px 0 5px;
+  padding: 7px 20px 4px 0;
   border-bottom: 1px solid #d9d9d9;
 
   @include tablet-size {
@@ -127,6 +131,10 @@
     font-size: 16px;
     line-height: 1.5;
     padding: 24px 0 48px;
+  }
+
+  @include desktop-size {
+    padding: 16px 0 0;
   }
 }
 
@@ -139,7 +147,7 @@
   grid-template-columns: auto minmax(40px, 1fr);
   align-items: center;
   gap: 15px;
-  max-width: 50%;
+  max-width: 65%;
 
   &::after {
     content: "";

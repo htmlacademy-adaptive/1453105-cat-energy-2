@@ -35,12 +35,12 @@
 .map__address {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 26px 0 6px;
+  padding: 26px 0;
   gap: 4px;
 
   @include tablet-size {
-    gap: 44%;
-    padding: 60px 40px;
+    gap: 51%;
+    padding: 60px 40px 50px;
   }
 
   @include desktop-size {
@@ -50,6 +50,8 @@
     background-color: $secondary-color;
     margin: 0;
     max-width: 565px;
+    gap: 100px;
+    padding: 60px 78px 80px 60px;
   }
 }
 

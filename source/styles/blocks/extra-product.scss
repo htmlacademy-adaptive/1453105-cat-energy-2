@@ -1,5 +1,6 @@
 .extra-product {
   @include desktop-size {
+    margin: 0 auto;
     display: grid;
     grid-template: auto 1fr / 1fr 245px;
     gap: 0 80px;
@@ -11,6 +12,13 @@
 
 .extra-product__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
+  margin: 0;
+  padding: 25px 0 36px;
+
+  @include tablet-size {
+    padding: 75px 0 80px;
+    font-size: 32px;
+  }
 
   @include desktop-size {
     grid-area: title;
@@ -21,12 +29,23 @@
   @include reset-list;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 19px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @include tablet-size {
+    border: 1px solid #d9d9d9;
+    gap: 0;
+    padding-bottom: 0;
+  }
 
   @include desktop-size {
     grid-area: list;
     gap: 0;
+    border: none;
     border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    justify-content: center;
   }
 }
 
@@ -38,11 +57,26 @@
     "title    title"
     "subtitle price"
     "link     link";
-  padding-bottom: 20px;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 13px;
+
+  @include tablet-size {
+    border-bottom: 1px solid #d9d9d9;
+    border-top: none;
+    padding: 26px 38px 28px;
+    grid-template: minmax(40px, 1fr) minmax(40px, auto)/ 5fr 3fr 1fr;
+    gap: 5px 20px;
+    grid-template-areas:
+      "title subtitle price"
+      "link  link     link";
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 
   @include desktop-size {
-    grid-template: auto / repeat(3, 1fr) 245px;
+    grid-template: auto / 8fr auto 1fr 245px;
     gap: 40px;
     grid-template-areas: "title subtitle price link";
     padding: 17px 0;
@@ -55,12 +89,22 @@
   text-transform: uppercase;
   margin: 0;
   grid-area: title;
+
+  @include tablet-size {
+    font-size: 20px;
+  }
 }
 
 .extra-product__item-subtitle {
   @include font-decore($second-font, 14px, 1, 400, $second-text-color);
   margin: 0;
   grid-area: subtitle;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.25;
+    justify-self: end;
+  }
 }
 
 .extra-product__item-price {
@@ -69,6 +113,11 @@
   margin: 0;
   grid-area: price;
   justify-self: right;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .extra-product__item-link {
@@ -76,13 +125,17 @@
   display: block;
   grid-area: link;
 
+  @include tablet-size {
+    font-size: 16px;
+  }
+
   @include desktop-size {
     padding: 7px 0;
   }
 }
 
 .extra-product__present {
-  margin: 35px 0 40px;
+  margin: 35px 0 20px;
   background-image:
     linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
     url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png");
@@ -101,6 +154,10 @@
     background-position: center center;
     background-size: auto, cover;
     margin-bottom: 0;
+    margin-top: 70px;
+    background-image:
+      linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
+      url("../../images/decorate/backgrounds/bg-catalog-page-tablet@1x.png");
   }
 
   @include desktop-size {
@@ -122,5 +179,33 @@
     display: block;
     background-image: url("../../icons/icon-gift.svg");
     margin: 0 auto 40px;
+  }
+
+  @include tablet-size {
+    display: flex;
+    padding: 50px 125px 58px 77px;
+    gap: 260px;
+    text-align: start;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before {
+      margin: 0;
+      width: 80px;
+      height: 82px;
+      flex-shrink: 0;
+    }
+  }
+
+  @include desktop-size {
+    gap: 0;
+    padding: 56px 42px 43px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+
+    &::before {
+      margin-bottom: 46px;
+    }
   }
 }

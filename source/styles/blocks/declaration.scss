@@ -31,6 +31,7 @@
       ". subtitle image-area ."
       ". link     image-area .";
     background-image: linear-gradient(to right, $secondary-color 50%, $accent-color 50%);
+    margin-bottom: 82px;
   }
 }
 
@@ -51,7 +52,7 @@
 
   @include desktop-size {
     grid-area: title;
-    padding: 110px 0 0 80px;
+    padding: 80px 0 40px 80px;
   }
 }
 
@@ -114,6 +115,6 @@
 
   @include desktop-size {
     grid-area: link;
-    margin: 0 0 0 80px;
+    margin: 52px 0 0 80px;
   }
 }

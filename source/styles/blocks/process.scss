@@ -25,7 +25,7 @@
   }
 
   @include desktop-size {
-    margin: 71px 0 32px;
+    margin: 71px 0 72px;
   }
 }
 
@@ -38,7 +38,7 @@
   @include tablet-size {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    gap: 37px 157px;
+    gap: 72px 157px;
     counter-reset: item 0;
     justify-content: left;
     margin: 0 30px;
@@ -47,7 +47,6 @@
   @include desktop-size {
     margin: 0;
     grid-template-columns: repeat(4, 1fr);
-    //grid-template-rows: 1fr;
     gap: 40px 90px;
   }
 }
@@ -103,7 +102,7 @@
     grid-template-areas:
       "image ."
       "title title";
-    gap: 31px 41px;
+    gap: 31px 32px;
     counter-increment: item 1;
 
     &::before {

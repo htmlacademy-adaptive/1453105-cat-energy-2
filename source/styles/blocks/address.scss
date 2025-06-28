@@ -15,4 +15,8 @@
     text-align: end;
     font-size: 16px;
   }
+
+  @include desktop-size {
+    text-align: start;
+  }
 }

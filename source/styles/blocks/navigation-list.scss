@@ -4,7 +4,6 @@
   width: 100%;
   color: inherit;
 
-
   @include reset-list;
 
   &--closed {
@@ -20,6 +19,7 @@
     flex-wrap: wrap;
     gap: 20px 33px;
     place-content: center end;
+    align-items: center;
   }
 
   @include desktop-size {
@@ -36,8 +36,20 @@
 
   @include tablet-size {
     border-bottom: none;
-    padding: 0;
+    padding: 10px 0;
     align-content: center;
+    max-width: 200px;
+
+    &:has(.navigation-list__link--active) {
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+
+  @include desktop-size {
+    &:has(.navigation-list__link--active) {
+      border-bottom: 2px solid;
+      border-color: inherit;
+    }
   }
 }
 
@@ -60,18 +72,21 @@
     transition: opacity 0.3s;
   }
 
+  @include tablet-size {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
   &--active {
     color: $accent-color;
 
     @include tablet-size {
       color: $based-color;
-      padding-bottom: 10px;
-      border-bottom: 2px solid $accent-color;
     }
 
     @include desktop-size {
       color: inherit;
-      border-bottom: 2px solid inherit;
+      border-color: inherit;
     }
   }
 }
