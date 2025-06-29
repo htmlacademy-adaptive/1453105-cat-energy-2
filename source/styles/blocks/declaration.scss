@@ -30,7 +30,7 @@
       ". title    image-area ."
       ". subtitle image-area ."
       ". link     image-area .";
-    background-image: linear-gradient(to right, $secondary-color 50%, rgba(105, 184, 57, 0.85) 50%),
+    background-image: linear-gradient(to right, $secondary-color 50%,  rgba(104, 183, 56, 0.85) 50%),
                       linear-gradient(to right, #504f54, #434247);
     margin-bottom: 82px;
   }

@@ -3,21 +3,6 @@
   background-color: $secondary-color;
   color: $based-color;
   position: relative;
-
-  @include desktop-size {
-    &--main::before {
-      position: absolute;
-      content: "";
-      width: 720px;
-      height: 684px;
-      background-image: url("../../images/decorate/backgrounds/bg-main-page-desktop@1x.png");
-      display: block;
-      top: 0;
-      left: 50%;
-      z-index: -1;
-    }
-  }
-
 }
 
 .header__navigation {
@@ -56,8 +41,8 @@
 
   &--main {
     @include desktop-size {
-      background-image: linear-gradient(to right, $secondary-color 50%, rgba(105, 184, 57, 0.85) 50%),
-                        linear-gradient(to right, #504f54, #434247);
+      background-image: linear-gradient(to right,  rgba(255, 255, 255) 50%, rgba(104, 183, 56, 0.85) 50%),
+      linear-gradient(to right, #504f54, #434247);
       color: $secondary-color;
       border-color: $secondary-color;
     }
