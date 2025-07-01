@@ -5,21 +5,37 @@
   position: relative;
 
   @include desktop-size {
-
     &:has(.header__navigation--main) {
+      background: linear-gradient(to right, #49494d , #3e3d43) no-repeat;
+      background-size: auto 694px;
+      z-index: -3;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 694px;
+        background: linear-gradient(to right, $secondary-color 50%, rgba(104, 183, 56, 0.85) 50%);
+        background-size: auto;
+        z-index: -1;
+      }
+
       &::before {
         content: "";
         position: absolute;
         top: 0;
+        left: 50%;
+        translate: 0;
         display: block;
-        width: 100%;
+        width: 50%;
         height: 694px;
-        background:
-          linear-gradient(to right, $secondary-color 50%, rgba(104, 183, 56, 0.85) 50%) top right,
-          url("../../images/decorate/backgrounds/bg-main-page-desktop@1x.png") no-repeat top right,
-          linear-gradient(to right, #49494d, #3e3d43) top right;
-        background-size: auto,  1040px auto, auto;
-        z-index: -1;
+        background-image: url("../../images/decorate/backgrounds/bg-main-page-desktop@1x.png");
+        background-size: 1041px 694px;
+        background-repeat: no-repeat;
+        z-index: -2;
       }
     }
   }
