@@ -3,6 +3,10 @@
   background-color: $secondary-color;
   color: $based-color;
   position: relative;
+
+  @include desktop-size {
+      background-color: transparent;
+  }
 }
 
 .header__navigation {
@@ -41,10 +45,11 @@
 
   &--main {
     @include desktop-size {
-      background-image: linear-gradient(to right,  rgba(255, 255, 255) 50%, rgba(104, 183, 56, 0.85) 50%),
-      linear-gradient(to right, #504f54, #434247);
+      //background-image: linear-gradient(to right,  rgba(255, 255, 255) 50%, rgba(104, 183, 56, 0.85) 50%),
+      //linear-gradient(to right, #504f54, #434247);
       color: $secondary-color;
       border-color: $secondary-color;
+      background-color: transparent;
     }
   }
 }
