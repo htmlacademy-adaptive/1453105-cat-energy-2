@@ -18,10 +18,10 @@
 
 .slider__list-item {
   &--before {
-
     grid-column: 1/2;
     overflow: hidden;
   }
+
   &--after {
     grid-column: 2/-1;
     overflow: hidden;
@@ -36,7 +36,6 @@
   display: block;
   margin: 0 auto;
 }
-
 
 .slider__button {
   position: absolute;

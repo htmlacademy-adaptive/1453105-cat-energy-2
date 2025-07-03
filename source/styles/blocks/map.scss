@@ -49,14 +49,13 @@
   @include desktop-size {
     grid-column: 1/-1;
     grid-row: 1/-1;
+
     iframe {
       min-height: 400px;
       height: auto;
     }
   }
 }
-
-
 
 .map__image {
   width: 100%;

@@ -6,7 +6,7 @@
 
   @include desktop-size {
     &:has(.header__navigation--main) {
-      background: linear-gradient(to right, #49494d , #3e3d43) no-repeat;
+      background: linear-gradient(to right, #49494d, #3e3d43) no-repeat;
       background-size: auto 694px;
       z-index: -3;
 

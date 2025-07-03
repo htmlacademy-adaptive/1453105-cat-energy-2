@@ -1,6 +1,6 @@
 /* в этот файл добавляет скрипты*/
-window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.header__navigation--js').classList.remove('header--hidden')
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.header__navigation--js').classList.remove('header__navigation--hidden');
 });
 
 document.getElementById('toggle-button').addEventListener('click', () => {

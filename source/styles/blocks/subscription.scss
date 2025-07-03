@@ -47,6 +47,7 @@
     margin: 0 auto;
   }
 }
+
 .subscription__title {
   @include font-decore($main-font, 24px, 1, 400, $based-color);
   margin: 0 0 0 20px;
