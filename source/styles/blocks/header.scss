@@ -25,6 +25,12 @@
     .header__toggle {
       display: none;
     }
+
+    @include tablet-size {
+      .header__navigation-list {
+        display: flex;
+      }
+    }
   }
 
   @include tablet-size {
@@ -94,4 +100,9 @@
     border-top: none;
     margin-right: 30px;
   }
+}
+
+
+.header--hidden {
+  display: none;
 }
