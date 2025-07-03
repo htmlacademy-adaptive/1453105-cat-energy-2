@@ -34,6 +34,10 @@
   border-bottom: 1px solid #d9d9d9;
   color: inherit;
 
+  &:last-child {
+    border-bottom: none;
+  }
+
   @include tablet-size {
     border-bottom: none;
     padding: 10px 0;
@@ -78,8 +82,6 @@
   }
 
   &--active {
-    color: $accent-color;
-
     @include tablet-size {
       color: $based-color;
     }

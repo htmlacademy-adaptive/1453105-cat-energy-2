@@ -213,6 +213,9 @@
   @include desktop-size {
     grid-area: image;
     margin: 0;
+    background-image:
+      linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
+      url("../../images/decorate/backgrounds/bg-catalog-page-desktop@1x.png");
   }
 }
 
