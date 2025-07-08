@@ -8,6 +8,10 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 55px 0;
   }
+
+  @include desktop-size {
+    padding: 68px 0;
+  }
 }
 
 .contacts__logo {
@@ -49,8 +53,8 @@
     display: block;
     mask: url("../../icons/icon-html-logo.svg");
     background-color: $third-text-color;
-    width: 27px;
-    height: 34px;
+    min-width: 27px;
+    min-height: 34px;
     transition: background-color 0.3s;
   }
 

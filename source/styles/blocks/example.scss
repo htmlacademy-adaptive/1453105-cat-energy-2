@@ -1,100 +1,111 @@
 .example {
   background-color: #eaeaea;
-  padding: 25px 0 40px;
+  padding: 25px 20px 40px;
 
   @include tablet-size {
     background: linear-gradient(to top, #eaeaea 462px, $secondary-color 463px);
-    display: grid;
-    grid-template-rows: repeat(4, auto) / repeat(2, 1fr);
-    grid-template-areas:
-      "title    title"
-      "subtitle subtitle"
-      "list     sum"
-      "slider   slider";
-    padding: 45px 0 100px;
+    padding: 45px 30px 101px;
   }
 
   @include desktop-size {
-    grid-template: 1fr auto  auto auto / 1fr 610px 610px 1fr;
-    grid-template-areas:
-      ". title    slider ."
-      ". subtitle slider ."
-      ". list     slider ."
-      ". sum      slider .";
-    padding-bottom: 75px;
+    display: grid;
+    grid-template: auto / 1fr 610px 610px 1fr;
+    grid-template-areas: ". info slider .";
+    padding: 0 0 75px;
     background: linear-gradient(to top, $basic-bg-color 462px, $secondary-color 463px);
   }
 }
 
+.example__wrapper {
+  @include desktop-size {
+    grid-area: info;
+  }
+}
+
 .example__title {
-  @include font-decore($main-font, 36px, 1.4, 400, $based-color);
-  padding: 0 20px 40px;
+  @include font-decore($main-font, 36px, 1.2, 400, $based-color);
+  padding-bottom: 40px;
   margin: 0;
 
   @include tablet-size {
-    grid-area: title;
     font-size: 60px;
     line-height: 1;
-    padding: 0 30px 60px;
+    padding-bottom: 60px;
   }
 
   @include desktop-size {
-    max-width: 1220px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 0 20px;
+    padding-bottom: 146px;
   }
 }
 
 .example__subtitle {
-  @include font-decore($second-font, 14px, 1.29, 400, $basic-text-color);
-  padding: 0 20px;
+  @include font-decore($second-font, 14px, 1.19, 400, $basic-text-color);
+  padding-bottom: 20px;
   margin: 0;
 
   @include tablet-size {
-    grid-area: subtitle;
     font-size: 16px;
     line-height: 1.5;
-    padding: 0 30px 55px;
+    padding-bottom: 55px;
   }
 
   @include desktop-size {
-    padding: 0 178px 69px 0;
+    padding: 0 178px 19px 0;
+  }
+}
+
+.example__facts {
+  @include tablet-size {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 99px;
+  }
+
+  @include desktop-size {
+    padding: 0;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  @include desktop-size {
+    padding-top: 50px;
   }
 }
 
 .example__list {
+  max-width: 280px;
+
   @include reset-list;
-  margin: 20px;
   display: grid;
-  grid-template: 1fr/ repeat(2, 1fr);
+  grid-template: auto / repeat(2, 1fr);
   gap: 10px 32px;
   align-items: normal;
+  padding-bottom: 20px;
 
   @include tablet-size {
-    grid-area: list;
-    margin: 0 0 0 30px;
-    gap: 0;
+    max-width: 367px;
+    gap: 15px 43px;
+    padding: 0;
   }
 
   @include desktop-size {
-    justify-content: left;
-    margin: 0;
     max-width: 366px;
+    width: 100%;
+    margin: 0;
   }
 }
 
 .example__list-item {
-  max-width: 124px;
   display: grid;
-  grid-template: 2fr 1fr / 1fr;
+  grid-template: auto 1fr / 1fr;
   background-color: inherit;
-
+  max-width: 124px;
 
   @include tablet-size {
+    max-width: initial;
     font-size: 30px;
     line-height: 1.2;
-    max-width: 162px;
   }
 }
 
@@ -102,7 +113,7 @@
   @include font-decore($main-font, 24px, 1, 400, $based-color);
   margin: 0;
   text-transform: uppercase;
-  padding: 14px 14px 8px;
+  padding: 14px;
   text-align: center;
   align-content: center;
   border: 1px solid #cdcdcd;
@@ -113,7 +124,7 @@
   @include tablet-size {
     font-size: 30px;
     line-height: 1.23;
-    padding: 15px;
+    padding: 15px 28px;
   }
 }
 
@@ -130,7 +141,7 @@
   @include tablet-size {
     background-color: $secondary-color;
     font-size: 14px;
-    margin: -7px 15px 0;
+    margin: -8px 15px 0;
   }
 
   @include desktop-size {
@@ -141,23 +152,24 @@
 .example__sum {
   @include font-decore($main-font, 14px, 1.4, 400, $based-color);
   text-transform: uppercase;
-  margin: 0 20px 20px;
+  margin: 0;
+  padding-bottom: 20px;
   text-align: center;
 
   @include tablet-size {
-    grid-area: sum;
+    max-width: 200px;
     font-size: 20px;
     line-height: 1;
-    margin: 0 30px 0 0;
     justify-items: right;
-    padding-top: 11px;
+    padding: 11px 0 0;
   }
 
   @include desktop-size {
+    max-width: none;
     display: flex;
     align-items: end;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 0;
   }
 }
 
@@ -169,19 +181,16 @@
 
   @include desktop-size {
     padding: 0;
+    padding-left: 63px;
   }
 }
 
 .example__slider {
-  margin: 0 20px;
-
-  @include tablet-size {
-    grid-area: slider;
-    margin-top: 100px;
-  }
+  margin: 0;
 
   @include desktop-size {
-    margin: 0;
-    padding-bottom: 10px;
+    grid-area: slider;
+    place-self: center right;
+    align-content: center;
   }
 }

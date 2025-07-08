@@ -1,22 +1,23 @@
 .process {
-  margin-bottom: 40px;
+  margin-bottom: 49px;
   margin-top: 20px;
 
   @include tablet-size {
     margin: 45px 0 0;
     padding-bottom: 47px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @include desktop-size {
     margin: 0 auto;
     border-bottom: none;
+    padding-bottom: 27px;
   }
 }
 
 .process__title {
-  @include font-decore($main-font, 36px, 1.4, 400, $based-color);
-  margin: 0 0 40px;
+  @include font-decore($main-font, 36px, 1.2, 400, $based-color);
+  margin: 0 0 38px;
 
   @include tablet-size {
     font-size: 60px;
@@ -47,7 +48,7 @@
   @include desktop-size {
     margin: 0;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px 90px;
+    gap: 40px 80px;
   }
 }
 

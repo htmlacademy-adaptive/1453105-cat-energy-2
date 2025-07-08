@@ -1,3 +1,10 @@
 .footer {
   background-color: $basic-bg-color;
+
+  @include desktop-size {
+    .logo__text {
+      width: 128px;
+      height: 24px;
+    }
+  }
 }

@@ -2,11 +2,16 @@
   font-family: $main-font;
   background-color: $secondary-color;
   color: $based-color;
+  position: relative;
+
+  @include desktop-size {
+    background-color: transparent;
+  }
 }
 
 .header__navigation {
   display: grid;
-  grid-template: 66px 1fr / 1fr minmax(24px, auto);
+  grid-template: 65px 1fr / 1fr minmax(24px, auto);
   grid-template-areas:
     "logo       toggle"
     "navigation navigation";
@@ -15,10 +20,17 @@
   &--none-js {
     .header__navigation-list {
       display: block;
+      position: initial;
     }
 
     .header__toggle {
       display: none;
+    }
+
+    @include tablet-size {
+      .header__navigation-list {
+        display: flex;
+      }
     }
   }
 
@@ -31,6 +43,7 @@
   }
 
   @include desktop-size {
+    padding-top: 55px;
     grid-template-columns: 1fr 610px 610px 1fr;
     grid-template-areas: ". logo navigation .";
     gap: 0;
@@ -40,20 +53,9 @@
 
   &--main {
     @include desktop-size {
-      background-image: linear-gradient(to right, $secondary-color 50%, $accent-color 50%);
       color: $secondary-color;
       border-color: $secondary-color;
-    }
-  }
-}
-
-.header__navigation--js {
-  .header__navigation-list {
-    position: absolute;
-    top: 66px;
-
-    @include tablet-size {
-      position: initial;
+      background-color: transparent;
     }
   }
 }
@@ -65,6 +67,7 @@
 
   @include tablet-size {
     margin-left: 0;
+    align-content: start;
   }
 }
 
@@ -81,10 +84,13 @@
 .header__navigation-list {
   grid-area: navigation;
   align-content: center;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid #e6e6e6;
+  position: absolute;
+  top: 65px;
 
   @include tablet-size {
     border-top: none;
     margin-right: 30px;
+    position: initial;
   }
 }

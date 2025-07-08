@@ -1,9 +1,15 @@
 .slider__list {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template: 256px /  repeat(2, 1fr);
   position: relative;
+  margin: 0 auto;
+  width: 280px;
+
+  @include tablet-size {
+    width: 560px;
+    grid-template: 512px /  repeat(2, 1fr);
+  }
 }
 
 .slider {
@@ -11,15 +17,19 @@
 }
 
 .slider__list-item {
-  &--after {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+  &--before {
+    grid-column: 1/2;
+    overflow: hidden;
   }
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  &--after {
+    grid-column: 2/-1;
+    overflow: hidden;
+
+    .slider__list-image {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .slider__list-image {
@@ -27,12 +37,11 @@
   margin: 0 auto;
 }
 
-
 .slider__button {
   position: absolute;
   top: 0;
   right: 50%;
-  transform: translateX(-50%);
+  //transform: translateX(-50%);
   width: 4px;
   border-radius: 2px;
   border: none;

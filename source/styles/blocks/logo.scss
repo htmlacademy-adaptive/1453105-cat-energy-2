@@ -18,6 +18,14 @@
   @include tablet-size {
     gap: 13px;
   }
+
+  @include desktop-size {
+    gap: 14px;
+  }
+}
+
+.logo__image {
+  display: block;
 }
 
 .logo__text {
@@ -25,5 +33,11 @@
 
   @include tablet-size {
     justify-self: start;
+  }
+
+  @include desktop-size {
+    width: 118px;
+    height: 21px;
+    display: block;
   }
 }
