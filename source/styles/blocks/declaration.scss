@@ -1,18 +1,15 @@
 .declaration {
   background-image:
     linear-gradient(to bottom, rgba(105, 184, 57, 0.85) 60.5%, $secondary-color 39.5%),
-    url("../../images/decorate/backgrounds/bg-main-page-mobile@1x.png"),
+    image-set(
+      url("../../images/decorate/backgrounds/bg-main-page-mobile@2x.webp") 2x,
+      url("../../images/decorate/backgrounds/bg-main-page-mobile@1x.webp") 1x,
+      url("../../images/decorate/backgrounds/bg-main-page-mobile@2x.png") 2x,
+      url("../../images/decorate/backgrounds/bg-main-page-mobile@1x.png") 1x
+    ),
     linear-gradient(to right, #504f54, #434247);
   background-position: center top;
   background-repeat: no-repeat;
-
-  @include retina {
-    background-image:
-      linear-gradient(to bottom, rgba(105, 184, 57, 0.85) 60.5%, $secondary-color 39.5%),
-      url("../../images/decorate/backgrounds/bg-main-page-mobile@2x.png"),
-      linear-gradient(to right, #504f54, #434247);
-    background-size: auto, auto 320px, auto;
-  }
   padding-bottom: 20px;
 
   @include tablet-size {
