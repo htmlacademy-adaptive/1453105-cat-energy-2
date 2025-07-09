@@ -36,7 +36,12 @@
         display: block;
         width: 50%;
         height: 694px;
-        background-image: url("../../images/decorate/backgrounds/bg-main-page-desktop@1x.png");
+        background-image:
+          image-set(
+            url("../../images/decorate/backgrounds/bg-main-page-desktop@2x.webp") 2x,
+            url("../../images/decorate/backgrounds/bg-main-page-desktop@1x.webp") 1x,
+            url("../../images/decorate/backgrounds/bg-main-page-desktop@2x.png") 2x,
+            url("../../images/decorate/backgrounds/bg-main-page-desktop@1x.png") 1x);
         background-size: 1041px 694px;
         background-repeat: no-repeat;
         z-index: -2;

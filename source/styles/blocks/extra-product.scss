@@ -239,17 +239,15 @@
   margin: 35px 0 20px;
   background-image:
     linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
-    url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png");
+    image-set(
+      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@2x.webp") 2x,
+      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.webp") 1x,
+      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@2x.png") 2x,
+      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@1x.png") 1x
+    );
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto, cover;
-
-  @include retina {
-    background-image:
-      linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
-      url("../../images/decorate/backgrounds/bg-catalog-page-mobile@2x.png");
-    background-size: auto, cover;
-  }
 
   @include tablet-size {
     background-position: center center;
@@ -257,7 +255,12 @@
     margin: 70px 0 0;
     background-image:
       linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
-      url("../../images/decorate/backgrounds/bg-catalog-page-tablet@1x.png");
+      image-set(
+        url("../../images/decorate/backgrounds/bg-catalog-page-tablet@2x.webp") 2x,
+        url("../../images/decorate/backgrounds/bg-catalog-page-tablet@1x.webp") 1x,
+        url("../../images/decorate/backgrounds/bg-catalog-page-tablet@2x.png") 2x,
+        url("../../images/decorate/backgrounds/bg-catalog-page-tablet@1x.png") 1x
+      );
   }
 
   @include desktop-size {
@@ -266,7 +269,12 @@
     margin: 0;
     background-image:
       linear-gradient(rgba(105, 184, 57, 0.85), rgba(105, 184, 57, 0.85)),
-      url("../../images/decorate/backgrounds/bg-catalog-page-desktop@1x.png");
+      image-set(
+        url("../../images/decorate/backgrounds/bg-catalog-page-desktop@2x.webp") 2x,
+        url("../../images/decorate/backgrounds/bg-catalog-page-desktop@1x.webp") 1x,
+        url("../../images/decorate/backgrounds/bg-catalog-page-desktop@2x.png") 2x,
+        url("../../images/decorate/backgrounds/bg-catalog-page-desktop@1x.png") 1x
+      );
   }
 }
 
