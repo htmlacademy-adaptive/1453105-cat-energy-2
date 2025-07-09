@@ -40,4 +40,11 @@
     height: 21px;
     display: block;
   }
+
+  &--footer {
+    @include desktop-size {
+      width: 128px;
+      height: 24px;
+    }
+  }
 }
