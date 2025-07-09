@@ -1,0 +1,137 @@
+.process {
+  margin-bottom: 49px;
+  margin-top: 20px;
+
+  @include tablet-size {
+    margin: 45px 0 0;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include desktop-size {
+    margin: 0 auto;
+    border-bottom: none;
+    padding-bottom: 27px;
+  }
+}
+
+.process__title {
+  @include font-decore($main-font, 36px, 1.2, 400, $based-color);
+  margin: 0 0 38px;
+
+  @include tablet-size {
+    font-size: 60px;
+    line-height: 1;
+    margin: 0 30px 72px;
+  }
+
+  @include desktop-size {
+    margin: 71px 0 72px;
+  }
+}
+
+.process__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @include tablet-size {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 72px 157px;
+    counter-reset: item 0;
+    justify-content: left;
+    margin: 0 30px;
+  }
+
+  @include desktop-size {
+    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 80px;
+  }
+}
+
+.process__list-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-content: start;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+
+    @include tablet-size {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--healthy {
+    &::before {
+      background: $accent-color url("../../icons/icon-leaf.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  &--easy {
+    &::before {
+      background: $accent-color url("../../icons/icon-powder.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  &--exchange {
+    &::before {
+      background: $accent-color url("../../icons/icon-cutlery.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  &--time {
+    &::before {
+      background: $accent-color url("../../icons/icon-clock.svg") no-repeat center;
+      background-size: 30px 30px;
+    }
+  }
+
+  @include tablet-size {
+    max-width: 227px;
+    grid-template: 80px 1fr / 80px 1fr;
+    grid-template-areas:
+      "image ."
+      "title title";
+    gap: 31px 32px;
+    counter-increment: item 1;
+
+    &::before {
+      grid-area: image;
+    }
+
+    &::after {
+      grid-column: 2 /-1;
+      grid-row: 1 /-1;
+      padding: 0;
+      margin-top: -30%;
+      place-self: start right;
+      content: counter(item);
+      display: block;
+
+      @include font-decore($main-font, 280px, 1, 400, $basic-bg-color);
+      z-index: -1;
+    }
+  }
+}
+
+.process__list-title {
+  @include font-decore($second-font, 14px, 1.18, 400, $basic-text-color);
+  margin: 0;
+
+  @include tablet-size {
+    grid-area: title;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

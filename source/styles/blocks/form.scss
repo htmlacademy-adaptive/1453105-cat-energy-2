@@ -1,0 +1,39 @@
+.form__input {
+  @include font-decore($main-font, 20px, 1, 400, $basic-text-color);
+  text-transform: uppercase;
+  padding: 12px 13px;
+  border: 1px solid #e7e7e7;
+  transition: border 0.3s;
+
+  &:hover {
+    border-color: #cdcdcd;
+    transition: border 0.3s;
+  }
+
+  &:invalid {
+    border: 2px solid $error-color;
+    transition: border 0.3s;
+  }
+
+  &:invalid:placeholder-shown {
+    border: 1px solid #e7e7e7;
+    transition: border 0.3s;
+  }
+
+  &::placeholder {
+    color: $basic-text-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 2px solid $basic-text-color;
+    transition: border 0.3s;
+  }
+}
+
+.form__button {
+  @include font-decore($main-font, 20px, 1, 400, $secondary-color);
+  border: none;
+  padding: 15px;
+  min-height: 56px;
+}

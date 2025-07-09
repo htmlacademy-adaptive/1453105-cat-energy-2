@@ -1,0 +1,130 @@
+.product {
+  display: grid;
+  grid-template: auto 1fr auto /  repeat(2, 1fr);
+  grid-template-areas:
+    "image title"
+    "image definition"
+    "link  link";
+
+  @include tablet-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, $secondary-color 81px, $basic-bg-color 81px);
+    max-width: 324px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 37px 40px;
+  }
+
+  @include desktop-size {
+    max-width: 245px;
+  }
+}
+
+.product__image-link {
+  grid-area: image;
+  place-self: center;
+
+  @include tablet-size {
+    padding-bottom: 22px;
+  }
+
+
+  @include desktop-size {
+    padding-bottom: 12px;
+  }
+}
+
+.product__image {
+  display: block;
+}
+
+.product__title {
+  @include font-decore($main-font, 16px, 1.25, 400, $second-text-color);
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  padding-right: 50px;
+
+  @include tablet-size {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    padding: 0 47px 20px;
+  }
+
+  @include desktop-size {
+    padding: 0 10px 23px;
+  }
+}
+
+.product__title-link {
+  text-decoration: none;
+  grid-area: title;
+  display: block;
+
+  @include tablet-size {
+    flex-grow: 1;
+  }
+}
+
+.product__definition {
+  grid-area: definition;
+  display: grid;
+  grid-template: auto / repeat(2, 1fr);
+  align-items: center;
+
+  @include desktop-size {
+    gap: 2px 0;
+  }
+}
+
+.product__definition-name {
+  @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+  margin: 0;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 7px;
+    padding-top: 3px;
+    border-bottom: 1px solid #cdcdcd;
+    align-self: self-end;
+  }
+}
+
+.product__definition-value {
+  @include font-decore($second-font, 12px, 1.33, 400, $basic-text-color);
+  margin: 0;
+  justify-self: right;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 7px;
+    padding-top: 3px;
+    border-bottom: 1px solid #cdcdcd;
+    text-align: end;
+    place-self: self-end normal;
+  }
+}
+
+.product__link {
+  text-decoration: none;
+  grid-area: link;
+  margin-top: 16px;
+  min-height: 40px;
+
+  @include tablet-size {
+    margin-top: 34px;
+    align-content: center;
+    display: grid;
+    font-size: 16px;
+    min-height: 40px;
+  }
+
+  @include desktop-size {
+    margin-top: 31px;
+  }
+}

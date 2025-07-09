@@ -1,0 +1,96 @@
+.navigation-list {
+  background-color: inherit;
+  text-align: center;
+  width: 100%;
+  color: inherit;
+
+  @include reset-list;
+
+  &--closed {
+    display: none;
+
+    @include tablet-size {
+      display: flex;
+    }
+  }
+
+  @include tablet-size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 33px;
+    place-content: center end;
+    align-items: center;
+  }
+
+  @include desktop-size {
+    border-color: inherit;
+    background-color: transparent;
+  }
+}
+
+
+.navigation-list__item {
+  padding: 22px 20px 24px;
+  border-bottom: 1px solid #e6e6e6;
+  color: inherit;
+
+  @include tablet-size {
+    border-bottom: none;
+    padding: 10px 0;
+    align-content: center;
+    max-width: 200px;
+
+    &:has(.navigation-list__link--active) {
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+
+  @include desktop-size {
+    padding: 10px 0 8px;
+
+    &:has(.navigation-list__link--active) {
+      border-bottom: 2px solid;
+      border-color: inherit;
+    }
+  }
+}
+
+.navigation-list__link {
+  @include font-decore($main-font, 20px, 1, 400, $based-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  color: inherit;
+  border-color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+
+  @include tablet-size {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @include desktop-size {
+    font-size: 20px;
+  }
+
+  &--active {
+    @include tablet-size {
+      color: $based-color;
+    }
+
+    @include desktop-size {
+      color: inherit;
+      border-color: inherit;
+    }
+  }
+}

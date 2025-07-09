@@ -1,0 +1,196 @@
+.example {
+  background-color: #eaeaea;
+  padding: 25px 20px 40px;
+
+  @include tablet-size {
+    background: linear-gradient(to top, #eaeaea 462px, $secondary-color 463px);
+    padding: 45px 30px 101px;
+  }
+
+  @include desktop-size {
+    display: grid;
+    grid-template: auto / 1fr 610px 610px 1fr;
+    grid-template-areas: ". info slider .";
+    padding: 0 0 75px;
+    background: linear-gradient(to top, $basic-bg-color 462px, $secondary-color 463px);
+  }
+}
+
+.example__wrapper {
+  @include desktop-size {
+    grid-area: info;
+  }
+}
+
+.example__title {
+  @include font-decore($main-font, 36px, 1.2, 400, $based-color);
+  padding-bottom: 40px;
+  margin: 0;
+
+  @include tablet-size {
+    font-size: 60px;
+    line-height: 1;
+    padding-bottom: 60px;
+  }
+
+  @include desktop-size {
+    padding-bottom: 146px;
+  }
+}
+
+.example__subtitle {
+  @include font-decore($second-font, 14px, 1.19, 400, $basic-text-color);
+  padding-bottom: 20px;
+  margin: 0;
+
+  @include tablet-size {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 55px;
+  }
+
+  @include desktop-size {
+    padding: 0 178px 19px 0;
+  }
+}
+
+.example__facts {
+  @include tablet-size {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 99px;
+  }
+
+  @include desktop-size {
+    padding: 0;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  @include desktop-size {
+    padding-top: 50px;
+  }
+}
+
+.example__list {
+  max-width: 280px;
+
+  @include reset-list;
+  display: grid;
+  grid-template: auto / repeat(2, 1fr);
+  gap: 10px 32px;
+  align-items: normal;
+  padding-bottom: 20px;
+
+  @include tablet-size {
+    max-width: 367px;
+    gap: 15px 43px;
+    padding: 0;
+  }
+
+  @include desktop-size {
+    max-width: 366px;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.example__list-item {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  background-color: inherit;
+  max-width: 124px;
+
+  @include tablet-size {
+    max-width: initial;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+.example__list-item-title {
+  @include font-decore($main-font, 24px, 1, 400, $based-color);
+  margin: 0;
+  text-transform: uppercase;
+  padding: 14px;
+  text-align: center;
+  align-content: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  @include tablet-size {
+    font-size: 30px;
+    line-height: 1.23;
+    padding: 15px 28px;
+  }
+}
+
+.example__list-item-subtitle {
+  @include font-decore($second-font, 12px, 1, 400, $based-color);
+  margin: -5px 22px 0;
+  text-transform: lowercase;
+  text-align: center;
+  align-content: start;
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  background-color: #eaeaea;
+
+  @include tablet-size {
+    background-color: $secondary-color;
+    font-size: 14px;
+    margin: -8px 15px 0;
+  }
+
+  @include desktop-size {
+    background-color: $basic-bg-color;
+  }
+}
+
+.example__sum {
+  @include font-decore($main-font, 14px, 1.4, 400, $based-color);
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
+
+  @include tablet-size {
+    max-width: 200px;
+    font-size: 20px;
+    line-height: 1;
+    justify-items: right;
+    padding: 11px 0 0;
+  }
+
+  @include desktop-size {
+    max-width: none;
+    display: flex;
+    align-items: end;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.example__sum-item {
+  @include tablet-size {
+    display: block;
+    padding-top: 9px;
+  }
+
+  @include desktop-size {
+    padding: 0;
+    padding-left: 63px;
+  }
+}
+
+.example__slider {
+  margin: 0;
+
+  @include desktop-size {
+    grid-area: slider;
+    place-self: center right;
+    align-content: center;
+  }
+}

@@ -1,0 +1,83 @@
+.contacts {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  padding: 20px 0;
+
+  @include tablet-size {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 55px 0;
+  }
+
+  @include desktop-size {
+    padding: 68px 0;
+  }
+}
+
+.contacts__logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0;
+
+  @include tablet-size {
+    border-bottom: none;
+    justify-self: start;
+    padding: 0;
+  }
+}
+
+.contacts__links {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+
+  @include tablet-size {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
+.developer-link {
+  @include font-decore($second-font, 16px, 1.25, 400, $basic-text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  &::after {
+    content: "";
+    display: block;
+    mask: url("../../icons/icon-html-logo.svg");
+    background-color: $third-text-color;
+    min-width: 27px;
+    min-height: 34px;
+    transition: background-color 0.3s;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::after {
+      background-color: $accent-color;
+      transition: background-color 0.3s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-color: $accent-color;
+      transition: background-color 0.3s;
+    }
+  }
+
+  @include tablet-size {
+    justify-content: end;
+    gap: 23px;
+    padding: 0;
+  }
+}

@@ -1,7 +1,31 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/button";
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/navigation-list.scss";
+@import "./blocks/toggle.scss";
+@import "./blocks/main.scss";
+@import "./blocks/declaration.scss";
+@import "./blocks/nutrition-type.scss";
+@import "./blocks/process";
+@import "./blocks/example.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/product.scss";
+@import "./blocks/show-product.scss";
+@import "./blocks/extra-product.scss";
+@import "./blocks/subscription.scss";
+@import "./blocks/form.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/map.scss";
+@import "./blocks/address.scss";
+@import "./blocks/link-list.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/slider.scss";
