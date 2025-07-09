@@ -1,17 +1,15 @@
 .process {
-  margin-bottom: 49px;
-  margin-top: 20px;
+  padding: 20px 0 49px;
 
   @include tablet-size {
-    margin: 45px 0 0;
-    padding-bottom: 47px;
+    padding: 45px 0 47px;
     border-bottom: 1px solid #e6e6e6;
   }
 
   @include desktop-size {
     margin: 0 auto;
+    padding: 0 0 27px;
     border-bottom: none;
-    padding-bottom: 27px;
   }
 }
 
@@ -22,7 +20,7 @@
   @include tablet-size {
     font-size: 60px;
     line-height: 1;
-    margin: 0 30px 72px;
+    margin: 0 0 72px;
   }
 
   @include desktop-size {
@@ -42,7 +40,6 @@
     gap: 72px 157px;
     counter-reset: item 0;
     justify-content: left;
-    margin: 0 30px;
   }
 
   @include desktop-size {

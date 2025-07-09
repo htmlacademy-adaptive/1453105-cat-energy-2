@@ -29,6 +29,15 @@
     border: 2px solid $basic-text-color;
     transition: border 0.3s;
   }
+
+  &:disabled {
+    background-color: $basic-bg-color;
+    color: #d9d9d9;
+
+    &::placeholder {
+      color: #d9d9d9;
+    }
+  }
 }
 
 .form__button {

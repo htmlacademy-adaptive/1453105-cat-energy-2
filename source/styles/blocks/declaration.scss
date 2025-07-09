@@ -79,19 +79,19 @@
   display: block;
   margin: 0 auto;
 
-  &-fake {
-    @include tablet-size {
-      grid-row: 3 / 4;
-      grid-column: 1/ -1;
-    }
+  @include desktop-size {
+    margin: 0 0 0 -160px;
+  }
+}
 
-    @include desktop-size {
-      grid-area: image-area;
-    }
+.declaration__image-fake {
+  @include tablet-size {
+    grid-row: 3 / 4;
+    grid-column: 1/ -1;
   }
 
   @include desktop-size {
-    margin: 0 0 0 -160px;
+    grid-area: image-area;
   }
 }
 
